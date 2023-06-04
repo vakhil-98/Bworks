@@ -67,28 +67,20 @@ jobs:
           echo "Nothing to deploy"
 
   release:
-    needs:
-      - test
     runs-on: ubuntu-latest
 
     steps:
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
+      - uses: actions/checkout@v2
 
-      - name: Upload Release Asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential
+
+      - name: Publish release
+        uses: actions/release@v2
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./path/to/built/output.zip
-          asset_name: Built_Output.zip
-          asset_content_type: application/zip
+          tag_name: v1.0.0
+          release_name: Initial Release
+          body: |
+            This is the initial release of the project.
