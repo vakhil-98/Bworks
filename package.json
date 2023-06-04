@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "echo \"No tests specified\""
+    "test": "echo \"No tests specified\"",
+    "build": "echo \"Build-command-here\""
     
   },
   "devDependencies": {
