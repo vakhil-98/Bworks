@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
     tags:
       - 'v*.*.*' #standard version name (e,g:v1.0.0)
           
