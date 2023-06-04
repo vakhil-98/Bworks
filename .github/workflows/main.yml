@@ -1,9 +1,10 @@
 name: CI/CD Pipeline
 
 on:
-  pull_request:
-    types:[opened]
   push:
+    branches:
+      - main
+  pull_request:
     branches:
       - main
     tags:
