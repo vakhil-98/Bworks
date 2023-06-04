@@ -5,8 +5,8 @@ on:
     branches:
       - main
     tags:
-      - 'v*.*.*' #standard version name (e,g:v1.0.0)
-          
+      - 'v*.*.*' # standard version name (e.g., v1.0.0)
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -66,4 +66,29 @@ jobs:
         run: |
           echo "Nothing to deploy"
 
-    
+  release:
+    needs:
+      - test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./path/to/built/output.zip
+          asset_name: Built_Output.zip
+          asset_content_type: application/zip
