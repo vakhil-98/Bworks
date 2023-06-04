@@ -8,7 +8,7 @@ on:
     branches:
       - main
     tags:
-      - 'v*.*.*' # standard version name (e.g., v1.0.0)
+      - 'v*..' # standard version name (e.g., v1.0.0)
 
 jobs:
   build:
@@ -68,3 +68,43 @@ jobs:
       - name: Deploy project
         run: |
           echo "Nothing to deploy"
+
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Create Release
+        uses: actions/javascript-action@v1
+        with:
+          script: |
+            const github = require('@actions/github');
+            async function createRelease() {
+              try {
+                const token = process.env.GITHUB_TOKEN;
+                const octokit = github.getOctokit(token);
+                const tag = await octokit.rest.repos.getLatestRelease({
+                  owner: github.context.repo.owner,
+                  repo: github.context.repo.repo,
+                 });
+
+              const release = await octokit.rest.repos.createRelease({
+                owner: github.context.repo.owner,
+                repo: github.context.repo.repo,
+                tag_name: tag.data.tag_name,
+                name: `Release ${tag.data.tag_name}`,
+                body: `This is the release ${tag.data.tag_name}`,
+                draft: false,
+                prerelease: false,
+              });
+
+              console.log(`Release created with ID: ${release.data.id}`);
+            } catch (error) {
+              console.error(error);
+            }
+            }
+          
+
+            createRelease();
+            
