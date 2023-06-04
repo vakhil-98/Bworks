@@ -5,7 +5,7 @@ on:
     branches:
       - main
     tags:
-      - 'v*.*.*' #standard version name (e,g:v1.0.0)
+      - 'v*.*.*' #standard version name (e,g:v1.0.0).
           
 jobs:
   build:
