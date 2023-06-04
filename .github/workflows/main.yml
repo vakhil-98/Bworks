@@ -2,6 +2,8 @@ name: CI/CD Pipeline
 
 on:
   pull_request:
+    types:[opened]
+  push:
     branches:
       - main
     tags:
@@ -65,3 +67,24 @@ jobs:
       - name: Deploy project
         run: |
           echo "Nothing to deploy"
+
+release:
+    needs:
+      - build
+      - lint
+      - test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Publish release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            Add release notes here   # Add relevant release notes
+          draft: false
+          prerelease: false
+    
