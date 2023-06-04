@@ -1,0 +1,22 @@
+{
+  "name": "BWorksg",
+  "version": "v1.0.0",
+  "description": "Your project description",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "echo \"No tests specified\""
+    
+  },
+  "devDependencies": {
+    "dev-dependency-name": "dev-dependency-version",
+    "eslint": "eslint-version"
+  },
+  "keywords": [
+    "your",
+    "project",
+    "keywords"
+  ],
+  "author": "Anees",
+  "license": "MIT"
+}
