@@ -7,9 +7,6 @@
     "start": "echo 'No start command specified'",
     "test": "echo \"No tests specified\""
   },
-  "devDependencies": {
-    "dev-dependency-name": "dev-dependency-version"
-  },
   "keywords": [
     "Bworks",
     "Cycle",
