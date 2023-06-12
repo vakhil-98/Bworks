@@ -31,7 +31,7 @@ jobs:
       - name: Install lint globally
         run: npm install -g lint
       - name: Lint project
-        run: yarn lint
+        run: lint
   release:
     name: Release
     runs-on: ubuntu-latest
