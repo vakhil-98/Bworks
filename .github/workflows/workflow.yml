@@ -27,3 +27,19 @@ jobs:
         run: yarn install
       - name: Lint project
         run: yarn lint
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: yarn install
+      - name: Build
+        run: yarn build
+      - name: Package code
+        run: yarn package
+      - name: Run tests
+        run: yarn test
+      - name: Publish release
+        run: yarn release
