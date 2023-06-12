@@ -44,4 +44,5 @@ jobs:
       - name: Run tests
         run: echo "yarn test or npm test"
       - name: Publish release
-        run: echo "yarn release or npm publish"
+        run: npm publish
+        #run: echo "yarn release or npm publish"
