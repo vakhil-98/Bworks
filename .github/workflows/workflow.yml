@@ -12,6 +12,7 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
+    if: github.event.action == 'pull_request'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -30,6 +31,7 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    if: startsWith(github.event.head_commit.message, 'v')
     steps:
       - name: Checkout
         uses: actions/checkout@v2
