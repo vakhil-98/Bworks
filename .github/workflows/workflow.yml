@@ -26,6 +26,10 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install dependencies
         run: yarn install
+      - name: Uninstall and reinstall Yarn globally
+        run: sudo npm uninstall -g yarn && sudo npm install -g yarn
+      - name: Install lint globally
+        run: npm install -g lint
       - name: Lint project
         run: yarn lint
   release:
