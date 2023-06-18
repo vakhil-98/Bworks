@@ -1,0 +1,48 @@
+name: CI/CD Pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - workflow
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    if: github.event.action == 'pull_request'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: echo "yarn install or npm install"
+      - name: Run tests
+        run: echo "yarn test or npm test"
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: echo "yarn install or npm install or sudo apt-get install -y lintian"
+      - name: Lint project
+        run: echo "yarn lint or lintian"
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    if: startsWith(github.event.head_commit.message, 'v')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: echo "yarn install or npm install"
+      - name: Build
+        run: echo "yarn build or npm run build"
+      - name: Package code
+        run: echo "yarn package"
+      - name: Run tests
+        run: echo "yarn test or npm test"
+      - name: Publish release
+        #run: npm publish
+        run: echo "yarn release or npm publish"
