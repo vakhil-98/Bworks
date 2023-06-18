@@ -1,0 +1,23 @@
+Copyleft: 
+
+GNU General Public License (GPL): The GPL is one of the most well-known copyleft licenses. 
+It ensures that any modifications or derivative works of the software must also be released under the GPL, 
+preserving the openness and freedom of the software.
+
+License Compatibility: The GPL is compatible with other GPL-licensed software, 
+allowing for easy integration and collaboration with other projects using the same license.
+This compatibility promotes the sharing and reuse of code within the GPL ecosystem.
+
+Strong Copyleft: The GPL is a strong copyleft license, 
+which means that it guarantees the continued openness and freedom of the software and any derivative works. 
+By choosing the GPL, you ensure that modifications and enhancements made to your software must be released under the same license terms. 
+This helps prevent the software from being locked down or becoming proprietary.
+
+Community Collaboration: The copyleft nature of the GPL encourages collaboration and sharing within the open source community.
+When others make improvements or modifications to GPL-licensed software, 
+they are required to contribute those changes back to the community, benefiting everyone involved. 
+This fosters a culture of cooperation and collective development.
+
+Protecting User Freedom: The GPL is designed to protect the freedoms of users.
+It ensures that anyone who receives your software has the right to use, modify, and distribute it, including commercially. 
+
