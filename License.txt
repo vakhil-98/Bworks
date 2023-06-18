@@ -1,0 +1,9 @@
+Numerous well-known projects, including Firefox, Thunderbird, and Rust, use the Mozilla Public License (MPL), a well-liked open source software license. 
+We may desire to use the MPL for our own open source project for a number of reasons. 
+
+A copyleft license applies, As a result, the MPL must also be used to license any work that uses our code in a derivative manner. 
+This makes it more likely that our code will remain open source and that any modifications will likewise be made available to the general public.
+This license is open-ended. This indicates that as long as you abide by the rules of the license, we are allowed to utilize the MPL-licensed code in proprietary software.
+
+It is a reputable license. Because the MPL is a well-known and respected license, it is likely that other developers are aware of it. 
+This may make it simpler to integrate our code into other projects.
