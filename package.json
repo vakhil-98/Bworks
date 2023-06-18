@@ -1,0 +1,17 @@
+{
+  "name": "BWorks",
+  "version": "v1.0.0",
+  "description": "Bworks  ",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo 'No start command specified'",
+    "test": "echo \"No tests specified\""
+  },
+  "keywords": [
+    "Bworks",
+    "Cycle",
+    "Donation"
+  ],
+  "author": "Bworks Team",
+  "license": "MIT"
+}
