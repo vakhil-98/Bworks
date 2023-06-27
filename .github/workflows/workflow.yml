@@ -4,9 +4,6 @@ on:
   pull_request:
     branches:
       - main
-  push:
-    branches:
-      - workflow
 
 jobs:
   test:
@@ -20,6 +17,8 @@ jobs:
         run: echo "yarn install or npm install"
       - name: Run tests
         run: echo "yarn test or npm test"
+      - name: Additional Step
+        run: echo "This is an additional step in the Test job"
   lint:
     runs-on: ubuntu-latest
     steps:
