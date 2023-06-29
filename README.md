@@ -2,7 +2,6 @@
   <img src="https://logopond.com/logos/46128249b83d22363450617239668cf4.png">
 </div>
 
-# Bworks
 ## Project overview
 Bworks is an organization that promotes sustainability, literacy, community service, and fun. BYTE services and BYCYCLE services are their two key offerings. 
 BYCYCLE services include receiving contributions of children's and adult-size bicycles, distributing them to the public, and repairing bicycles that are in poor condition. 
