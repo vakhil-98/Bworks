@@ -21,6 +21,44 @@ All contributions must adhere to the following requirements, at a minimum:
 + The bug reports need to be precise and reproducible.
 + The feature requests must be well-defined and feasible.
 
+## Dependencies
+
+The BWorks Donation Application has the following main dependencies:
+
+- React: A JavaScript library for building user interfaces.
+- Node.js: A JavaScript runtime environment.
+- Express: A web application framework for Node.js.
+
+You can find a complete list of dependencies in the `package.json` file.
+
+## CI/CD Pipeline
+
+The BWorks Donation Application has a CI/CD pipeline defined in the `.github/workflows/ci-cd.yml` file. This pipeline is triggered on pull requests to the main branch and pushes to the `workflow` branch.
+
+The pipeline consists of the following jobs:
+
+1. *Test*: This job runs the application's tests to ensure the code meets the expected behavior.
+
+2. *Lint*: This job checks the codebase for linting issues and ensures code quality and style consistency.
+
+3. *Release*: This job is triggered when a commit message starts with the letter 'v', indicating a version release. It builds the application, runs tests, packages the code, and publishes the release.
+
+The CI/CD pipeline helps automate the process of building, testing, and releasing the BWorks Donation Application, ensuring the stability and quality of the codebase.
+
+## Testing
+
+The BWorks Donation Application uses automated tests to verify the correctness of the code. Tests are written using a testing framework and can be found in the `tests/` directory.
+
+To run the tests locally, use the following command:
+
+bash
+$ npm test
+
+The tests will be executed, and the results will be displayed in the console.
+
+## Road map for Contribution
+![IMG_0305](https://github.com/anees1203/BWorks-Material-Donation-Tracking/assets/86214595/786fbd9f-fa61-427b-9420-e0caee928fd5)
+
 ## Welcome
 
 New project contributors are always welcome, and we are pleased to have them. Please feel free to ask any questions you may have in the project's forum or chat room.
