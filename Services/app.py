@@ -41,6 +41,16 @@ def transaction():
     return jsonify(res)
 
 
+@app.route('/gettransaction',methods = ['get'])
+def get_transaction():
+    res = gettransaction_db()
+    return jsonify(res)
+
+@app.route('/etl_bicycles',methods = ['get'])
+def etl_bicycles():
+    res = etlbicycles_db()
+    return jsonify(res)
+    
 if __name__ == '__main__':
     app.run()
 
