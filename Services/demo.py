@@ -163,5 +163,53 @@ def transaction_db(req):
     return {"issuccess": False}
 
 
+def gettransaction_db():
+    try:
+
+        from sqlalchemy import text
+        with Session(engine) as session:
+            #sql_statement = text("SELECT * FROM Transactions" )
+            #query = session.query(Transactions).from_statement(sql_statement)
+            result = session.query(Transactions).all()
+            transaction_list = list()
+            for row in result:
+                transaction_list.append({
+                    "TransactionId": row.UserId,
+                    "UserId": row.ContactId,
+                    "BicycleId" : row.BicycleId,
+                })
+            return transaction_list;
+
+    except Exception as e:
+        return e
+
+
+import pandas as pd
+
+
+def etlbicycles_db():
+    try:
+        result = 0
+        print("reading csv data")
+        df = pd.read_csv(r'C:\Users\hp\OneDrive\Desktop\Open_Source\Services\Bicycles.csv')
+        print("length of df", len(df) )
+        with Session(engine) as session:
+            count1 = session.query(Bicycles).count()
+            df.to_sql('Bicycles',engine,if_exists= 'append',index= False)
+            count2 = session.query(Bicycles).count()
+            result = count2-count1
+        return {
+            "status":True,
+            "records_inserted":result 
+        }
+
+    except Exception as e:
+        print(e)
+
+    
+
+
+
+
 
 
