@@ -1,0 +1,46 @@
+.myButton {
+    color: #fff;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 6px;
+    border-radius: 10px;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    background-image: linear-gradient(to right, #1c6ea4 0%, #2388cb 50%, #144e75 100%);
+    box-shadow: 5px 5px 15px 5px #000;
+    border: 2px solid #1c6ea4;
+    display: inline-block;
+  }
+  
+  .myButton:hover {
+    background: #1c6ea4;
+  }
+  
+  .myButton:active {
+    background: #144e75;
+  }
+  
+
+  /* Styles for the email input field */
+  input[type="text"]#email {
+    /* ...existing styles... */
+  }
+  
+  input[type="text"]#email:focus {
+    outline: none;
+    box-shadow: 0 0 5px #1c6ea4;
+  }
+  
+  /* Styles for the password input field */
+  input[type="password"]#password {
+    /* ...existing styles... */
+  }
+  
+  input[type="password"]#password:focus {
+    outline: none;
+    box-shadow: 0 0 5px #1c6ea4;
+  }
