@@ -1,8 +1,7 @@
-#transaction
-{
+#transaction {
     width: 300px;
     margin: 0 auto;
- }
+  }
   
   .add-form {
     padding: 20px;
@@ -53,6 +52,3 @@
     background-color: #144e75;
   }
   
-
-
-

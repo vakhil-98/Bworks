@@ -1,0 +1,14 @@
+<div>
+<label> Welcome to Bworks ETL operation </label><br>
+
+<label> click this button to perform etl action </label>
+<button (click)="etl_bicycles()"> submit </button> <br>
+
+
+
+<label id = "bicycles_success" *ngIf = "etl_bicycle_data.status" >  
+ETL transaction result, number of records inserted: {{etl_bicycle_data.records_inserted}} 
+
+</label>
+
+</div>
