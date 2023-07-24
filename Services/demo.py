@@ -1,3 +1,4 @@
+from numpy import insert
 from sqlalchemy import create_engine
 from sqlalchemy import select
 #from sqlalchemy import filter, filter_by
@@ -68,22 +69,20 @@ class Transactions(Base):
     user = relationship("Users", backref="transactions")
     bicycle = relationship("Bicycles", backref="transactions")
 
-# Base.metadata.create_all(engine)
+class Data(Base):
+    __tablename__ = "Data"
+
+    ID:int = Column(Integer, primary_key= True)
+    Name: str = Column(String,nullable=False )
+    EmailId: str = Column(String,nullable=False )
+    Survey: str = Column(String,nullable=False )
+    DropOff_Location: str = Column(String,nullable=False )
+    DateTime = Column(DateTime, nullable = True)
+    BikeModel: str = Column(String,nullable=False )
+    BikeColor: str = Column(String,nullable=False )
+    BikeWheel = Column(Integer, nullable = True)
 
 
-
-# with Session(engine) as session:
-#     user = Users(Name = "Naga",ContactId = 123,Email="naga",Address="hno",UserName = "naga",Password="naga")
-#     session.add_all([user])
-#     session.commit()
-
-#     Bicycle = Bicycles(CycleName = "Naga",CycleImage = 'img.jpg')
-#     session.add_all([Bicycle])
-#     session.commit()
-
-#     transaction = Transactions(UserId = 1,BicycleId = 1,BicycleNo = 123, IsBuy = False,IsDonate = True, Address = "abc", ContactId = 1234, DateOfDonate = datetime.utcnow(), DateOfBuy = None, Status = True)
-#     session.add_all([transaction])
-#     session.commit()
 
 def register_db(req):
     with Session(engine) as session:
@@ -110,26 +109,6 @@ def bicycle_db():
     
 def login_db(req):
     try:
-        # with Session(engine) as session:
-            
-        #     result = session.query(Users).filter(Users.UserName == req['UserName']).filter(Users.Password == req['Password']).first()
-        #     print(result)
-        #     print(result.UserId)
-        #     response = {
-        #         "UserId": result.UserId,
-        #         "Name" : result.Name,
-        #         "ContactId": result.ContactId,
-        #         "Email": result.Email,
-        #         "UserName": result.UserName,
-        #         "Address": result.Address
-        #     }
-
-        # from sqlalchemy.orm import sessionmaker
-        # Session = sessionmaker(bind=engine)
-        # session = Session()
-        # result = session.query(Users).fy(UserName=req['UserName'], Password=req['Password']).first()
-        # #result = session.query(Users)
-        # print(result)
 
         from sqlalchemy import text
         with Session(engine) as session:
@@ -162,7 +141,6 @@ def transaction_db(req):
         return {"issuccess": True}
     return {"issuccess": False}
 
-
 def gettransaction_db():
     try:
 
@@ -182,6 +160,7 @@ def gettransaction_db():
 
     except Exception as e:
         return e
+
 
 
 import pandas as pd
@@ -207,9 +186,91 @@ def etlbicycles_db():
         print(e)
 
     
+# def data_db():
+#     try:
+#         from sqlalchemy import text
+#         with Session(engine) as session:
+#             #sql_statement = text("SELECT * FROM Transactions" )
+#             #query = session.query(Transactions).from_statement(sql_statement)
+#             result = session.query(Data).all()
+#             data_list = list()
+#             for row in result:
+#                 data_list.append({
+#                     "ID" :row.ID,
+#                     "Name":row.Name,
+#                     "EmailId":row.EmailId,
+#                     "Survey":row.Survey,
+#                     "DropOff_Location":row.DropOff_Location,
+#                     "DateTime":row.DateTime,
+#                     "BikeModel":row.BikeModel,
+#                     "BikeColor":row.BikeColor,
+#                     "BikeWheel ":row.BikeWheel
+#                 })
+#             print(data_list)
+#             return data_list
+            
+
+#     except Exception as e:
+#         print(e)
+#         return e
+    
+
+def data_db(data):
+    try:
+        lst = []
+        for req in data:
+
+            
+           
+            data_insert = Data(Name = req['Name'],EmailId = req['EmailId'],Survey=req['Survey'],DropOff_Location=req['DropOff_Location'],BikeModel = req['BikeModel'],BikeColor=req['BikeColor'],BikeWheel=req['BikeWheel'],DateTime=datetime.utcnow())
+            lst.append(data_insert)
+        result = []
+        with Session(engine) as session:
+            session.add_all(lst)
+            session.commit()
+            result = session.query(Data).all()
+
+            
+            # Create a list of dictionaries representing the data
+            data_list = []
+            for row in result:
+                data_list.append({
+                    "ID": row.ID,
+                    "Name": row.Name,
+                    "EmailId": row.EmailId,
+                    "Survey": row.Survey,
+                    "DropOff_Location": row.DropOff_Location,
+                    "DateTime": row.DateTime,
+                    "BikeModel": row.BikeModel,
+                    "BikeColor": row.BikeColor,
+                    "BikeWheel": row.BikeWheel
+                })
+            return data_list
+            
+    except Exception as e:
+        print(e)
+        return e
+    
 
 
 
+# from sqlalchemy import select, bindparam
+# scalar_subq = (
+#     select(data_db.c.id)
+#     .where(data_db.c.name == bindparam("username"))
+#     .scalar_subquery()
+# )
 
-
-
+# with engine.connect() as conn:
+#     result = conn.execute(
+#         insert(data_db).values(user_id=scalar_subq),
+#         [
+#             {
+#                 "username": "spongebob",
+#                 "email_address": "spongebob@sqlalchemy.org",
+#             },
+#             {"username": "sandy", "email_address": "sandy@sqlalchemy.org"},
+#             {"username": "sandy", "email_address": "sandy@squirrelpower.org"},
+#         ],
+#     )
+#     conn.commit()

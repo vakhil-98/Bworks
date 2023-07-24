@@ -3,11 +3,18 @@ import { BworksapiService } from 'src/app/services/bworksapi.service';
 import { User, LoginRequest } from 'src/app/datamodels/bworksmodel';
 import { Subscription } from 'rxjs';
 import { UserService } from 'src/app/services/user.service';
+import { Router } from '@angular/router';
+//import { MatCarouselModule } from '@angular/material/carousel';
+
+
+ 
+  
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+ // declarations: [MdbCarouselItemComponent],
 })
 export class LoginComponent implements OnInit, OnDestroy {
   email: string = "";
@@ -16,7 +23,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   subscription: Subscription | undefined;
   transaction_enable : boolean = false;
 
-  constructor(private bworksApi: BworksapiService, private userService: UserService) { }
+  constructor(private bworksApi: BworksapiService, private userService: UserService, private router : Router) { }
 
   ngOnInit(): void {
     // Initialization tasks go here
@@ -41,10 +48,11 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     if(resp!= undefined && resp != null){
       this.userService.setuserId(resp.UserId);
-      this.transaction_enable = true
-
-      
+      //this.transaction_enable = true
+      this.enable_Register = true
+      this.router.navigate(['/transaction'])
     }
+
     });
   }
 
