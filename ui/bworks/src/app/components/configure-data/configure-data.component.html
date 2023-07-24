@@ -1,0 +1,14 @@
+<p>Configure data</p>
+
+
+<ag-grid-angular
+    style="width: 1000px; height: 500px"
+    class="ag-theme-alpine"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [rowData]="rowData"
+    [rowSelection]="'multiple'"
+    [animateRows]="true"
+    (gridReady)="onGridReady($event)"
+    (rowValueChanged)="onRowValueChanged($event)"
+  ></ag-grid-angular>
