@@ -1,0 +1,1 @@
+export let userId: Number = 0;

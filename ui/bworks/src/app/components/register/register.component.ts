@@ -25,9 +25,10 @@ constructor(private bworksApi: BworksapiService, private userService: UserServic
 ngOnInit(): void {
   // Initialization tasks go here
   console.log('Component initialized');
-  this.subscription = this.userService.getRegistrationStatus().subscribe(status => {
-  this.enable_Register = status;
-  })
+  // this.subscription = this.userService.getRegistrationStatus().subscribe(status => {
+  // this.enable_Register = status;
+  // })
+  this.userService.setRegistrationStatus(true)
 }
 
 
@@ -53,3 +54,4 @@ cancel(){
 }
 
 }
+
