@@ -3,13 +3,70 @@
 </div>
 
 ## Project overview
-Bworks is an organization that promotes sustainability, literacy, community service, and fun. BYTE services and BYCYCLE services are their two key offerings. 
-BYCYCLE services include receiving contributions of children's and adult-size bicycles, distributing them to the public, and repairing bicycles that are in poor condition. 
-BYTE services include setting up computer classes.
+Bworks is an organization that promotes sustainability, literacy, community service, and fun. BYTE services and BYCYCLE services are their two key offerings. The goal of this project is to create a community service program for Bworks, a business that specializes in bicycle programs. Tracking provider information, bicycle inventory, and delivery data are the goals. A user-friendly online application with features including provider registration, bicycle listing, delivery tracking, and reporting will be created as part of the project. Each segment of the project will have its own time frame and be broken down into milestones.
 
-The goal of this project is to create a community service program for Bworks, a business that specializes in bicycle programs. Tracking provider information, bicycle inventory, and delivery data are the goals. A user-friendly online application with features including provider registration, bicycle listing, delivery tracking, and reporting will be created as part of the project. Each segment of the project will have its own time frame and be broken down into milestones.
+## Programs
+
+Works offers a range of exciting programs that benefit our community. Join BWorks for the following programs:
+
+Earn-A-Bike: Learn bike maintenance and safety skills in this hands-on course for ages 8-17. Earn a refurbished bike upon completion. 
+
+Earn-A-Computer: Discover the world of computers and the internet while earning a refurbished desktop, monitor, and more. Open to ages 8-17.
+
+Learn-to-Ride: Perfect for ages 8-17, learn to ride a bike with our supportive instructors. Loaner bikes and helmets provided. 
+
+Extra Practice Sessions: Join for additional bike practice on specified dates.
+
+Upcoming Classes and Registration: 
+
+To sign up for any of these programs, visit the BWorks Upcoming Classes and Registration page. Stay tuned for new sessions and bookmark the page for easy access.
+
+Link: https://www.bworks.org/classes/
+
+## Hours of Operation:
+
+BWorks is open for in-person and curbside shopping:
+
+Tuesdays and Thursdays: 11 a.m. to 7 p.m.  
+Saturdays: 10 a.m. to 2 p.m.
+
+Donation Drop-Off: 
+
+Donate bicycles at 2414 Menard St., St. Louis during: 
+Tuesdays and Thursdays: 11 a.m. to 7 p.m.
+Saturdays: 10 a.m. to 2 p.m.
+
+You can also drop off donations at these partner locations:
+
+- The Alpine Shop: Monday-Saturday 10 a.m. to 9 p.m., Sunday 11 a.m. to 6 p.m.
+- Billy Goat Bicycle Company: Monday-Friday 10 a.m. to 7 p.m., Saturday 10 a.m. to 5 p.m.  
+- Cursed Bikes & Coffee: Tuesday-Friday 7 a.m. to 7 p.m., Saturday 8 a.m. to 5 p.m., Sunday 8 a.m. to 4 p.m.
+- The Hub Bicycle Company: Tuesday-Friday 10 a.m. to 6 p.m., Saturday 9 a.m. to 5 p.m.
+
+## BWorks Membership
+
+Join BWorks Membership and Make a Difference:
+Support the mission to empower youth by becoming a BWorks member. Your membership keeps the programs free and helps children thrive in a safe, supportive environment.
+
+How Your Membership Helps:
+
+- Your contribution directly supports BWorks programs.
+- Overhead expenses are covered by grants and retail store revenue.
+- Your support provides essential materials and skilled teachers for students.
+  
+Flexible Options to Show Your Support:
+
+- One-Time Donation: Make an immediate impact with a secure PayPal donation.
+- Monthly Installments: Start with as little as $5 per month to become an ongoing supporter.
+  
+Join Today: 
+
+Click the link below to securely join BWorks membership. Monthly donors receive email confirmations and can cancel anytime.
+
+Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4X66CJZ7ERUP4&source=url
 
 ## Project Objectives: 
+
 + Create an Automated Email Gratitude System for Donators.
 + Create an intuitive web application that enables Bworks to monitor provider information, bicycle inventory, and delivery details.
 + Give Bworks access to the tools it needs to register service providers, list bicycles, monitor delivery, and produce reports.
@@ -17,14 +74,12 @@ The goal of this project is to create a community service program for Bworks, a 
 + Increasing the availability of bicycles for those in need.
 
 ## Features
+
 + Able to send Emails with Photos for Donators.
 + Able to track provider details.
 + Able to track delivery information.
 + Look up bicycle inventory.
 + Look up bicycle listing.
-
-## Program
-BWorks gives kids the chance to earn a free bike while they learn about bicycle safety and maintenance from our volunteers. By registering for the classes.
 
 ## [LICENSE](LICENSE) used for the project.
 
@@ -33,6 +88,7 @@ BWorks gives kids the chance to earn a free bike while they learn about bicycle 
 ### General Questions
 
 ### What is Bworks?
+
 Bworks is an organization that promotes sustainability, literacy, community service, and fun. It offers two key services: BICYCLE services, which involves receiving, distributing, and repairing bicycles, and BYTE services, which sets up computer classes.
 
 ### What are the objectives of the Bworks project?
