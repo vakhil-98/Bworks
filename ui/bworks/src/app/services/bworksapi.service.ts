@@ -4,7 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { Data } from '@angular/router';
 import { HttpHeaders } from '@angular/common/http';
-import { User, LoginRequest, Bicycle, Transaction, RegisterUser } from '../datamodels/bworksmodel';
+import { User, LoginRequest, Bicycle, Transaction, RegisterUser,EtlTransactions, } from '../datamodels/bworksmodel';
+
 
 
 @Injectable({
@@ -54,7 +55,22 @@ export class BworksapiService {
     return this.http.post<User>(url, data, httpOptions);
     
   }
+
+  etl_bicycles(): Observable<any> {
+
+    const url = "http://127.0.0.1:5000/etl_bicycles"
+    return this.http.get<EtlTransactions>(url);
+    
+  }
+
+  data_db(): Observable<any> {
+
+    const url = "http://127.0.0.1:5000/data_db"
+    return this.http.get<EtlTransactions>(url);
+    
+  }
   
+  //configapi data
 }
 
 
