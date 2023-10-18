@@ -1,4 +1,8 @@
 # Sample CI/CD Pipeline Configuration
+on:
+  push:
+    branches:
+      - main
 
 # Define the stages for the pipeline
 stages:
