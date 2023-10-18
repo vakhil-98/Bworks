@@ -2,12 +2,8 @@ from sqlalchemy import create_engine
 from sqlalchemy import select
 #from sqlalchemy import filter, filter_by
 
-
-#engine = create_engine('mssql+pyodbc://@' + DESKTOP-8FANH7R + '/' + BWorks + '?trusted_connection=yes&driver=ODBC+Driver+13+for+SQL+Server')
-
-#engine = create_engine('mssql+pyodbc://@' + 'DESKTOP-8FANH7R' + '/' + 'BWorks' + '?trusted_connection=yes&driver=ODBC Driver 17 for SQL Server')
-
-engine = create_engine('mssql+pyodbc://@' + 'DESKTOP-8FANH7R' + '/' + 'BWorks' + '?trusted_connection=yes&driver=SQL Server', use_setinputsizes=False)
+#Add your laptop name here to create a successful connection with database.
+engine = create_engine('mssql+pyodbc://@' + 'Your_Laptop_Name' + '/' + 'BWorks' + '?trusted_connection=yes&driver=SQL Server', use_setinputsizes=False)
 
 from datetime import datetime
 from sqlalchemy import ForeignKey,DateTime,Boolean
@@ -68,23 +64,6 @@ class Transactions(Base):
     user = relationship("Users", backref="transactions")
     bicycle = relationship("Bicycles", backref="transactions")
 
-# Base.metadata.create_all(engine)
-
-
-
-# with Session(engine) as session:
-#     user = Users(Name = "Naga",ContactId = 123,Email="naga",Address="hno",UserName = "naga",Password="naga")
-#     session.add_all([user])
-#     session.commit()
-
-#     Bicycle = Bicycles(CycleName = "Naga",CycleImage = 'img.jpg')
-#     session.add_all([Bicycle])
-#     session.commit()
-
-#     transaction = Transactions(UserId = 1,BicycleId = 1,BicycleNo = 123, IsBuy = False,IsDonate = True, Address = "abc", ContactId = 1234, DateOfDonate = datetime.utcnow(), DateOfBuy = None, Status = True)
-#     session.add_all([transaction])
-#     session.commit()
-
 def register_db(req):
     with Session(engine) as session:
         user = Users(Name = req['Name'],ContactId = req['ContactId'],Email=req['Email'],Address=req['Address'],UserName = req['UserName'],Password=req['Password'])
@@ -110,26 +89,6 @@ def bicycle_db():
     
 def login_db(req):
     try:
-        # with Session(engine) as session:
-            
-        #     result = session.query(Users).filter(Users.UserName == req['UserName']).filter(Users.Password == req['Password']).first()
-        #     print(result)
-        #     print(result.UserId)
-        #     response = {
-        #         "UserId": result.UserId,
-        #         "Name" : result.Name,
-        #         "ContactId": result.ContactId,
-        #         "Email": result.Email,
-        #         "UserName": result.UserName,
-        #         "Address": result.Address
-        #     }
-
-        # from sqlalchemy.orm import sessionmaker
-        # Session = sessionmaker(bind=engine)
-        # session = Session()
-        # result = session.query(Users).fy(UserName=req['UserName'], Password=req['Password']).first()
-        # #result = session.query(Users)
-        # print(result)
 
         from sqlalchemy import text
         with Session(engine) as session:

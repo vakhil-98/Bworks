@@ -4,7 +4,8 @@
   "description": "Bworks  ",
   "main": "index.js",
   "scripts": {
-    "start": "echo 'No start command specified'",
+    "ng": "ng",
+    "start": "ng serve",
     "test": "echo \"No tests specified\""
   },
   "dependencies": {
