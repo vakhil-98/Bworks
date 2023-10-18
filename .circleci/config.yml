@@ -4,13 +4,11 @@ on:
     branches:
       - main
 
-# Define the stages for the pipeline
-stages:
-  - build
-
 # Define the jobs within each stage
 jobs:
-  build:
-    stage: build
-    script:
-      - echo "Starting the build process..."
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: echo "yarn install or npm install"
