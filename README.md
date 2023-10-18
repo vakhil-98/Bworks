@@ -53,7 +53,7 @@ Bworks is an organization that promotes sustainability, literacy, community serv
 The objectives of the Bworks project are to create an automated email gratitude system for donators, develop an intuitive web application for monitoring provider information, bicycle inventory, and delivery details, and improve the effectiveness and efficiency of Bworks' bicycle programs to increase the availability of bicycles for those in need.
 
 ### Programs
-### How can kids enroll in the BWorks program to earn a free bike?
+### How can kids enroll in the BWorks program "Earn-A-Bike"?
 Kids can enroll in the BWorks program to earn a free bike while learning about bicycle safety and maintenance from volunteers. They can register for the classes to participate.
 
 ### Documentation and Contributing
