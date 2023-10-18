@@ -1,10 +1,8 @@
 # Sample CI/CD Pipeline Configuration
-name: circleci CI/CD Pipeline
-version: 2.1
-on:
-  push:
-    branches:
-      - main
+
+# Define the stages for the pipeline
+stages:
+  - build
 
 # Define the jobs within each stage
 jobs:
