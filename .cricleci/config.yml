@@ -1,6 +1,6 @@
 # Sample CI/CD Pipeline Configuration
 name: circleci CI/CD Pipeline
-
+version: 2.1
 on:
   push:
     branches:
