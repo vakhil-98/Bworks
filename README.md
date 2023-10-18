@@ -3,7 +3,7 @@
 </div>
 
 ## Project overview
-Bworks is an organization that promotes sustainability, literacy, community service, and fun. BYTE services and BYCYCLE services are their two key offerings. The goal of this project is to create a community service program for Bworks, a business that specializes in bicycle programs. Tracking provider information, bicycle inventory, and delivery data are the goals. A user-friendly online application with features including provider registration, bicycle listing, delivery tracking, and reporting will be created as part of the project. Each segment of the project will have its own time frame and be broken down into milestones.
+Bworks is an organization that promotes sustainability, literacy, community service, and fun. BYTE services and BYCYCLE services are their two key offerings. The goal of this project is to create a community service program for Bworks, a business that specializes in bicycle programs. Tracking provider information, bicycle inventory, and delivery data are the goals. A user-friendly web application with features including provider registration, bicycle listing, delivery tracking, and reporting will be created as part of the project. Each segment of the project will have its own time frame and be broken down into milestones.
 
 ## Programs
 
