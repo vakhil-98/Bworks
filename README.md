@@ -23,48 +23,6 @@ To sign up for any of these programs, visit the BWorks Upcoming Classes and Regi
 
 Link: https://www.bworks.org/classes/
 
-## Hours of Operation:
-
-BWorks is open for in-person and curbside shopping:
-
-Tuesdays and Thursdays: 11 a.m. to 7 p.m.  
-Saturdays: 10 a.m. to 2 p.m.
-
-Donation Drop-Off: 
-
-Donate bicycles at 2414 Menard St., St. Louis during: 
-Tuesdays and Thursdays: 11 a.m. to 7 p.m.
-Saturdays: 10 a.m. to 2 p.m.
-
-You can also drop off donations at these partner locations:
-
-- The Alpine Shop: Monday-Saturday 10 a.m. to 9 p.m., Sunday 11 a.m. to 6 p.m.
-- Billy Goat Bicycle Company: Monday-Friday 10 a.m. to 7 p.m., Saturday 10 a.m. to 5 p.m.  
-- Cursed Bikes & Coffee: Tuesday-Friday 7 a.m. to 7 p.m., Saturday 8 a.m. to 5 p.m., Sunday 8 a.m. to 4 p.m.
-- The Hub Bicycle Company: Tuesday-Friday 10 a.m. to 6 p.m., Saturday 9 a.m. to 5 p.m.
-
-## BWorks Membership
-
-Join BWorks Membership and Make a Difference:
-Support the mission to empower youth by becoming a BWorks member. Your membership keeps the programs free and helps children thrive in a safe, supportive environment.
-
-How Your Membership Helps:
-
-- Your contribution directly supports BWorks programs.
-- Overhead expenses are covered by grants and retail store revenue.
-- Your support provides essential materials and skilled teachers for students.
-  
-Flexible Options to Show Your Support:
-
-- One-Time Donation: Make an immediate impact with a secure PayPal donation.
-- Monthly Installments: Start with as little as $5 per month to become an ongoing supporter.
-  
-Join Today: 
-
-Click the link below to securely join BWorks membership. Monthly donors receive email confirmations and can cancel anytime.
-
-Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4X66CJZ7ERUP4&source=url
-
 ## Project Objectives: 
 
 + Create an Automated Email Gratitude System for Donators.
